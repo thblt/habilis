@@ -1,0 +1,3 @@
+#+TITLE: The Habilis (a keyboard)
+
+Habilis is a split concave keyboard, heavily inspired from the [[https://github.com/adereth/dactyl-keyboard][Dactyl]], but [[https://en.wikipedia.org/wiki/Design_for_manufacturability][designed for manufacturing]].  As such, its production requires neither 3D printing nor precision bending, but 2D laser cutting (a future update /may/ require 3D cutting) and a screwdriver, plus the usual suspects (PCB manufacturing, and so on).
