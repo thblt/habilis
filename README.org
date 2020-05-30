@@ -5,3 +5,5 @@ Habilis is a split concave keyboard, heavily inspired from the [[https://github.
 * Notes
 
 Connector: GX12 can be a nice alternative to jack
+
+Just an idea, for layouts where numbers are uppercase: create a number-caps-lock key that will keep the keyboard capslocked until a non-number key is pressed [ deactivates capslock before sending the corresponding keycode ]
