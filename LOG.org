@@ -1,17 +1,51 @@
--*- org -*-
+#+TITLE: Habilis build log
 
-2023-10-22
+* 2023-10-22
 
 Resuming work on the project, starting a work log.
 
 Inventor works, a bit of a mishap with screw models, easily fixed.
 
-SWITCHES ROTATION --- The very small spacer pieces that support the switches may not be necessary anymore, which would simplify work A LOT.  They were introduced to avoid rotating the switches 1/4 turn.  This was because, on classical (opaque black body) switches, the hole for a led was at the top of the switch; rotating it would bring it left or right of the cap, making light distribution uneven. But with new-ish "RGB MX" switches with transparent body, I believe  rotation is now fine, the led goes on the PCB *under* the switch.  We can then dispense with spacers, so a lot less holes in the "blades", and a much simpler build.  EVEN IF IT DOESN’T WORK (My Corsair board has MX RGB switches, and the led is very clearly on top), let’s go with the simple design for the start.  (The Advantage360 *doesn’t* have backlighting!)
+** Switches rotation
 
-COLUMN COUNT --- still tempted to add a seventh column on the external side.  current design is 58 keys + thumb cluster (probably six, making that 64).  That’s not a lot.   A seventh column may be less accessible, but would add a lot of useful keys (volume, lighting, whatever)
+The very small spacer pieces that support the switches may not be
+necessary anymore, which would simplify work A LOT.  They were
+introduced to avoid rotating the switches 1/4 turn.  This was because,
+on classical (opaque black body) switches, the hole for a led was at
+the top of the switch; rotating it would bring it left or right of the
+cap, making light distribution uneven. But with new-ish "RGB MX"
+switches with transparent body, I believe rotation is now fine, the
+led goes on the PCB *under* the switch.  We can then dispense with
+spacers, so a lot less holes in the "blades", and a much simpler
+build.  EVEN IF IT DOESN’T WORK (My Corsair board has MX RGB switches,
+and the led is very clearly on top), let’s go with the simple design
+for the start.  (The Advantage360 *doesn’t* have backlighting!)
 
-F-KEYS --- Also: what about F-keys?  They may be on a separate layers over the number keys.
+** Column count
 
-THUMB CLUSTER --- I think three switches on each side should be enough, maybe larger (1x2 rather than 1x1).    Tentative design here http://www.keyboard-layout-editor.com/#/gists/53dcad97f6ce719a55c0f79fed64bb7c
+Still tempted to add a *seventh column on the external side*.  current
+design is 58 keys + thumb cluster (probably six, making that 64).
+That’s not a lot.  A seventh column may be less accessible, but would
+add a lot of useful keys (volume, lighting, whatever).  Also, with the
+BÉPO layout, the right hand is fully used without any special key, and
+still lacks $ and % on the number row.  BUT there are still unused
+keys, especially the lowest row on right hand.
 
-SWITCHES -- something stronger than browns for thumb keys, like cherry clear.
+With seven columns and three keys on each thumb cluster, total count
+becomes: 68 + 6 = 72.  
+
+** Missing keys
+
+ - K-Keys
+ - Home, End, PgUp, PgDown (on the arrow keys with a modifier?)
+ - SysRq, PrtScrn, Pause
+
+** Thumb cluster
+
+I think three switches on each side should be enough, maybe larger
+(1x2 rather than 1x1).  Tentative design here
+http://www.keyboard-layout-editor.com/#/gists/53dcad97f6ce719a55c0f79fed64bb7c
+
+** Switches
+
+something stronger than browns for thumb keys, like cherry clear.
