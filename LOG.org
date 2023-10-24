@@ -1,12 +1,43 @@
 #+TITLE: Habilis build log
 
+This is a work log I’ll try to keep up-to-date.  See [[Decisions]] for a
+quick summary of important final decisions.
+
+* 2023-10-24
+
+Today’s goals:
+
+ - bring the switch plate model back to a usable state, remove custom
+   spacers, rotate switches, and limit shifting of columns.
+ - add seventh column on the external side.
+   I finally won’t do this.  A seventh column will take unnessary
+   space on the mouse side for probably no gain.  A QMK layers will be
+   a lot more efficient.  If need be, that layer can be called from an
+   extra key on the thumb cluster.
+
+** TODO extra_slot_dim 
+
+This variable (in shared_parameters) was used to add a bit of space to
+negative slots, to make sure the pieces fit correctly.
+
+I set it back to 0, from 0.1mm.  Maybe it isn’t a good idea, although
+the POM prototype didn’t need the extra space. Probably relevant for
+STAINLESS STEEL, though.
+
+* 2023-10-23
+
+** Tenting kit :tenting:
+
+The home row should stand perfectly horizontal by default, and the
+keyboard should have some adjustable feet for tenting.
+
 * 2023-10-22
 
 Resuming work on the project, starting a work log.
 
 Inventor works, a bit of a mishap with screw models, easily fixed.
 
-** Switches rotation
+** DONE Switches rotation                                          :switches:
 
 The very small spacer pieces that support the switches may not be
 necessary anymore, which would simplify work A LOT.  They were
@@ -21,10 +52,10 @@ build.  EVEN IF IT DOESN’T WORK (My Corsair board has MX RGB switches,
 and the led is very clearly on top), let’s go with the simple design
 for the start.  (The Advantage360 *doesn’t* have backlighting!)
 
-** Column count
+** Column count :layout:
 
 Still tempted to add a *seventh column on the external side*.  current
-design is 58 keys + thumb cluster (probably six, making that 64).
+design is 58 keys + thumb clusters (probably six, making that 64).
 That’s not a lot.  A seventh column may be less accessible, but would
 add a lot of useful keys (volume, lighting, whatever).  Also, with the
 BÉPO layout, the right hand is fully used without any special key, and
@@ -34,18 +65,36 @@ keys, especially the lowest row on right hand.
 With seven columns and three keys on each thumb cluster, total count
 becomes: 68 + 6 = 72.  
 
-** Missing keys
+** Missing keys :layout:
 
  - K-Keys
  - Home, End, PgUp, PgDown (on the arrow keys with a modifier?)
  - SysRq, PrtScrn, Pause
 
-** Thumb cluster
+** Thumb cluster :thumbs:layout:
 
 I think three switches on each side should be enough, maybe larger
 (1x2 rather than 1x1).  Tentative design here
 http://www.keyboard-layout-editor.com/#/gists/53dcad97f6ce719a55c0f79fed64bb7c
 
-** Switches
+** Switches :switches:
 
 something stronger than browns for thumb keys, like cherry clear.
+
+* Decisions :META:
+
+This undated entry keeps tracks of all decisions I consider final.  Of
+course, they may change.
+
+ - Column count :: 6.  Really, stick to 6.  It’s an *ergonomic*
+   keyboard, so there’s no reason to add hard-to-reach keys.  QMK
+   layers will be much more useful than extra keys, and you can cram
+   some in the thumb cluster if you need to.
+ - Switches :: rotated, no RGB backlighting.  In a /future/ version I may
+   find a way to install them upright, and then put backlighting on
+   the PCB.
+
+   If it’s easy to achieve, I may still put RGB leds on the little
+   PCBs just to try.
+ - Tenting :: Want to, details TBD.
+ - Palm rest :: Want to, details TBD.
