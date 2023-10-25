@@ -3,19 +3,40 @@
 This is a work log I’ll try to keep up-to-date.  See [[Decisions]] for a
 quick summary of important final decisions.
 
+* 2023-10-25
+
+On a train and on a small laptop, so not much work on the Habilis
+today.  Importing notes that were on the README to that log, so I have everything in one place.
+
+** Halves connector :electronics:
+
+GX12 can be a nice alternative to jack.
+
+** A transient shift-lock? :layout:
+
+I also had this on the README: "Just an idea, for layouts where
+numbers are uppercase: create a number-caps-lock key that will keep
+the keyboard capslocked until a non-number key is pressed [
+deactivates capslock before sending the corresponding keycode ]"
+
+(Technically, this would be a layer I guess, where every key but
+number keys is release shift?)
+
+But this is probably much less useful than the numpad on a layer.
+
 * 2023-10-24
 
 Today’s goals:
 
- - bring the switch plate model back to a usable state, remove custom
-   spacers, rotate switches, and limit shifting of columns.
- - add seventh column on the external side.
+ - Bring the switch plate model back to a usable state, remove custom
+   spacers, rotate switches, and limit shifting of columns. (DONE)
+ - add seventh column on the external side. (WON'T)
    I finally won’t do this.  A seventh column will take unnessary
-   space on the mouse side for probably no gain.  A QMK layers will be
+   space on the mouse side for probably no gain.  A QMK layer will be
    a lot more efficient.  If need be, that layer can be called from an
    extra key on the thumb cluster.
 
-** TODO extra_slot_dim 
+** TODO extra_slot_dim
 
 This variable (in shared_parameters) was used to add a bit of space to
 negative slots, to make sure the pieces fit correctly.
@@ -63,7 +84,7 @@ still lacks $ and % on the number row.  BUT there are still unused
 keys, especially the lowest row on right hand.
 
 With seven columns and three keys on each thumb cluster, total count
-becomes: 68 + 6 = 72.  
+becomes: 68 + 6 = 72.
 
 ** Missing keys :layout:
 
@@ -79,22 +100,24 @@ http://www.keyboard-layout-editor.com/#/gists/53dcad97f6ce719a55c0f79fed64bb7c
 
 ** Switches :switches:
 
-something stronger than browns for thumb keys, like cherry clear.
+Something stronger than browns for thumb keys, like Cherry Clear.
 
 * Decisions :META:
 
 This undated entry keeps tracks of all decisions I consider final.  Of
 course, they may change.
 
- - Column count :: 6.  Really, stick to 6.  It’s an *ergonomic*
+ - Column count :: 6.  *Really, stick to 6.* It’s an *ergonomic*
    keyboard, so there’s no reason to add hard-to-reach keys.  QMK
    layers will be much more useful than extra keys, and you can cram
-   some in the thumb cluster if you need to.
+   some in the thumb cluster or the topside of the keyboard (like the
+   classical Kinesis f-keys) if you need to.
  - Switches :: rotated, no RGB backlighting.  In a /future/ version I may
    find a way to install them upright, and then put backlighting on
-   the PCB.
+   the PCBs.
 
    If it’s easy to achieve, I may still put RGB leds on the little
    PCBs just to try.
- - Tenting :: Want to, details TBD.
- - Palm rest :: Want to, details TBD.
+ - Tenting :: Want to, details TBD.  Probably Ergodox-EZ style.
+ - Palm rest :: Want to, details TBD.  Molded silicone?
+ - Firmware :: QMK.
