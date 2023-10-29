@@ -3,6 +3,27 @@
 This is a work log I’ll try to keep up-to-date.  See [[Decisions]] for a
 quick summary of important final decisions.
 
+* 2023-10-29
+
+Today and yesterday, did some work on the electronics part.
+Configured, wired and flashed a simple 3×3 keyboard on a
+breadboard. As expected, it was trivial, and the electronics part
+should pose no special difficulties.
+
+** Shopping list
+
+I lack some equipement, though, so here's a list of stuff I need to
+order:
+
+*** DONE Diodes (1N4148)
+*** DONE Dupont wires
+*** DONE MX sockets
+*** DONE USB-C ProMicros
+*** TODO ADUM3160 USB isolator
+*** TODO Breadboard wires (22AWG = 0.33mm²)
+*** TODO GX12 connectors
+*** TODO Switch opener
+
 * 2023-10-25
 
 On a train and on a small laptop, so not much work on the Habilis
