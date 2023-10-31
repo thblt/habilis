@@ -45,6 +45,11 @@ number keys is release shift?)
 
 But this is probably much less useful than the numpad on a layer.
 
+** Matrix :wiring:resources:
+
+Read that article to refresh my understanding of key matrices and the
+ghosting issue: https://www.dribin.org/dave/keyboard/one_html/
+
 * 2023-10-24
 
 Today’s goals:
